@@ -46,4 +46,5 @@ class Matrix{
         Matrix operator-(const Matrix& rhs);
         void operator*=(const Matrix& rhs);
         Matrix operator*(const Matrix& rhs);
+        double maxNorm();
 };

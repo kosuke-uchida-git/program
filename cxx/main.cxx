@@ -1,8 +1,9 @@
-#include"utilities/math/matrix.h"
+#include"utilities/machineLearning/linearRegression.h"
 
 int main(void){
-   Matrix test("file.txt");
+    Matrix data("file.txt");
+    LinearRegression test(data);
+    test.train(1.0E-14);
     test.print();
-    test.output("output.txt");
     return 0;
 }

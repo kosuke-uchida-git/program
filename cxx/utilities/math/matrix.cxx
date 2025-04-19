@@ -99,7 +99,7 @@ int Matrix::row_() const{
 }
 
 void Matrix::row_(int arg_row){
-    if(row<=0){
+    if(arg_row<=0){
         std::cout<<"Error! void Matrix::row_(int arg_row)"<<std::endl;
         exit(0);
     }
@@ -107,7 +107,10 @@ void Matrix::row_(int arg_row){
         return;
     
     row=arg_row;
-    delete[] element;
+    if(element != nullptr){
+        delete[] element;
+        element = nullptr;
+    }
     element=new Vector[row];
     Vector dummy(1,column,0.0);
     for(int i=0;i<row;i++)
@@ -119,7 +122,7 @@ int Matrix::column_() const{
 }
 
 void Matrix::column_(int arg_column){
-    if(column<=0){
+    if(arg_column<=0){
         std::cout<<"Error! void Matrix::column_(int arg_column)"<<std::endl;
         exit(0);
     }
@@ -127,7 +130,10 @@ void Matrix::column_(int arg_column){
         return;
     
     column=arg_column;
-    delete[] element;
+    if(element != nullptr){
+        delete[] element;
+        element = nullptr;
+    }
     element=new Vector[row];
     Vector dummy(1,column,0.0);
     for(int i=0;i<row;i++)
@@ -282,4 +288,17 @@ Matrix Matrix::operator*(const Matrix& rhs)  {
         std::cout<<"Error! Matrix Matrix::operator*(const Matrix& rhs)"<<std::endl;
         exit(0);
     }
+}
+
+double Matrix::maxNorm(){
+    if(row<1 || column<1){
+        std::cout<<"Error! double Matrix::maxNorm()"<<std::endl;
+        exit(0);
+    }
+    double max=0.0;
+    for(int i=0;i<row;i++)
+        for(int j=0;j<column;j++)
+            if(std::abs(element[i][j])>max)
+                max=std::abs(element[i][j]);
+    return max;
 }
