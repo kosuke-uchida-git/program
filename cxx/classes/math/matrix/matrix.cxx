@@ -36,6 +36,7 @@ Matrix::Matrix(const Matrix &arg_matrix){
 
 Matrix::Matrix(std::string filename){
     //read file
+    filename="file/"+filename;
     std::ifstream ifs(filename);
     if (!ifs.is_open()) {
         std::cout<<"Error1! Matrix:: Matrix(std::string filename)"<<std::endl;
@@ -301,4 +302,12 @@ double Matrix::maxNorm(){
             if(std::abs(element[i][j])>max)
                 max=std::abs(element[i][j]);
     return max;
+}
+
+double Matrix::l1norm(){
+    double result=0.0;
+    for(int i=0;i<row;i++)
+        for(int j=0;j<column;j++)
+            result+=std::abs(element[i][j]);
+    return result;
 }

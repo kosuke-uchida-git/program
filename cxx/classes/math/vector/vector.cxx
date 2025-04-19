@@ -44,8 +44,8 @@ Vector::~Vector(){
 bool Vector::rowColumn_() const{
     return rowColumn;
 }
-void Vector::rowColumn_(bool arg_rowColumn){
-    rowColumn=arg_rowColumn;
+bool& Vector::rowColumn_(){
+    return rowColumn;
 }
 
 int Vector::size_() const{

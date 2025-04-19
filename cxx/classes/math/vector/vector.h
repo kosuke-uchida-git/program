@@ -1,4 +1,4 @@
-#include<iostream>
+#include"../../functions/functions.h"
 
 class Vector{
     protected:
@@ -17,7 +17,7 @@ class Vector{
 
         //getters and setters
         bool rowColumn_() const;
-        void rowColumn_(bool arg_rowColumn);
+        bool& rowColumn_();
         int size_() const;
         void size_(int arg_size);
         double& operator[](int index) const;

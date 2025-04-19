@@ -1,7 +1,7 @@
 #include<fstream>
 #include <sstream>
-#include"vector.h"
-#include"../list/searchList.h"
+#include"../vector/vector.h"
+#include"../../list/searchList/searchList.h"
 
 class Matrix{
     protected:
@@ -47,4 +47,5 @@ class Matrix{
         void operator*=(const Matrix& rhs);
         Matrix operator*(const Matrix& rhs);
         double maxNorm();
+        double l1norm();
 };
