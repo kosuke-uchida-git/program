@@ -10,6 +10,6 @@ classes/machineLearning/regression/linearRegression/linearRegression.cxx \
 classes/machineLearning/regression/ridgeLinearRegression/ridgeLinearRegression.cxx \
 classes/machineLearning/regression/lassoLinearRegression/lassoLinearRegression.cxx \
 classes/machineLearning/regression/elasticNetLinearRegression/elasticNetLinearRegression.cxx \
-main/main.cxx
+main/main.cxx -DVERBOSE
 ./a.out
 rm a.out

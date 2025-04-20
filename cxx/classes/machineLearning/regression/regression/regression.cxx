@@ -59,3 +59,7 @@ double Regression::mae(){
     double result=tmp_matrix.l1norm()/missingNumber;
     return result;
 }
+
+void Regression::printMae(){
+    std::cout<<"mae="<<mae()<<std::endl;
+}

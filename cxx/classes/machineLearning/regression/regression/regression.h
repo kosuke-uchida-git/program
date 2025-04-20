@@ -22,6 +22,7 @@ class Regression{
         virtual void train(double criterion);
         virtual void predict();
         double mae();
+        void printMae();
 };
 
 #endif

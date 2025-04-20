@@ -20,6 +20,10 @@ void LinearRegression::print(){
 }
 
 void LinearRegression::train(double criterion){
+    #ifdef VERBOSE
+    int step=0;
+    #endif
+
     while(1){
         double tmp_bias=bias;
         Matrix tmp_coefficient(coefficient);
@@ -27,9 +31,14 @@ void LinearRegression::train(double criterion){
         revise_bias();
         revise_coefficient();
         double difference=std::abs(bias-tmp_bias)+(coefficient-tmp_coefficient).maxNorm();
-        //std::cout<<"difference="<<difference<<std::endl;
         if(difference<criterion)
             break;
+
+        #ifdef VERBOSE
+        step++;
+        if(step%10000==0)
+            std::cout<<step<<":difference="<<difference<<std::endl;
+        #endif
     }
 }
 

@@ -306,9 +306,33 @@ double Matrix::maxNorm(){
 }
 
 double Matrix::l1norm(){
+    if(row<1 || column<1){
+        std::cout<<"Error! double Matrix::l1norm()"<<std::endl;
+        exit(0);
+    }
     double result=0.0;
     for(int i=0;i<row;i++)
         for(int j=0;j<column;j++)
             result+=std::abs(element[i][j]);
+    return result;
+}
+
+double Matrix::l2norm(){
+    if(row<1 || column<1){
+        std::cout<<"Error! double Matrix::l2norm()"<<std::endl;
+        exit(0);
+    }
+    return sqrt(l2normSquare());
+}
+
+double Matrix::l2normSquare(){
+    if(row<1 || column<1){
+        std::cout<<"Error! double Matrix::l2normSquare()"<<std::endl;
+        exit(0);
+    }
+    double result=0.0;
+    for(int i=0;i<row;i++)
+        for(int j=0;j<column;j++)
+            result+=element[i][j]*element[i][j];
     return result;
 }

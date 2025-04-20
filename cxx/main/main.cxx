@@ -1,11 +1,10 @@
 #include"../classes/machineLearning/regression/elasticNetLinearRegression/elasticNetLinearRegression.h"
 
 int main(void){
-    Matrix m("file.txt");
+    Matrix data("red_wine.txt");
 
-    ElasticNetLinearRegression r(m,0.5,2,100,100);
-    r.train(1.0E-15);
-    //r.print();
-    std::cout<<"mae="<<r.mae()<<std::endl;
+    ElasticNetLinearRegression test(data,0.5,0,0.1,0.1);
+    test.train(1.0E-16);
+    test.printMae();
     return 0;
 }

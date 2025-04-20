@@ -1,5 +1,3 @@
-#include<fstream>
-#include <sstream>
 #include"../vector/vector.h"
 #include"../../list/searchList/searchList.h"
 
@@ -51,6 +49,8 @@ class Matrix{
         Matrix operator*(const Matrix& rhs);
         double maxNorm();
         double l1norm();
+        double l2norm();
+        double l2normSquare();
 };
 
 #endif
