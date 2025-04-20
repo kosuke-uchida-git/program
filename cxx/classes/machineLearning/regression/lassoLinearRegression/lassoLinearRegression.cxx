@@ -1,6 +1,7 @@
 #include"lassoLinearRegression.h"
 
 LassoLinearRegression::LassoLinearRegression(Matrix data, double arg_missingRate, int seed, double arg_lassoRegularizer):
+    Regression(data, arg_missingRate, seed),
     LinearRegression(data, arg_missingRate, seed)
 {
     lassoRegularizer=arg_lassoRegularizer;
@@ -25,7 +26,7 @@ void LassoLinearRegression::revise_coefficient(int dimension_index){
     if(std::abs(numerator)>lassoRegularizer)
         numerator-=lassoRegularizer*sign(numerator);
     else
-        numerator=0;
+        numerator=0.0;
     //same as the base class
     coefficient[0][dimension_index]=numerator/denominator;
 }

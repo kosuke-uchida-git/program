@@ -1,5 +1,8 @@
 #include"../../../math/matrix/matrix.h"
 
+#ifndef REGRESSION
+#define REGRESSION
+
 class Regression{
     protected:
         Matrix explanatory_training;
@@ -20,3 +23,5 @@ class Regression{
         virtual void predict();
         double mae();
 };
+
+#endif

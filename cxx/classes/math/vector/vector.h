@@ -1,5 +1,8 @@
 #include"../../functions/functions.h"
 
+#ifndef VECTOR
+#define VECTOR
+
 class Vector{
     protected:
         bool rowColumn;//row vector : rowColumn=1, column vector : rowColumn=0
@@ -35,3 +38,5 @@ class Vector{
         Vector operator-(const Vector& rhs) const;
         Vector operator*(const Vector& rhs) const;
 };
+
+#endif

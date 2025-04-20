@@ -36,7 +36,7 @@ Matrix::Matrix(const Matrix &arg_matrix){
 
 Matrix::Matrix(std::string filename){
     //read file
-    filename="file/"+filename;
+    filename="files/"+filename;
     std::ifstream ifs(filename);
     if (!ifs.is_open()) {
         std::cout<<"Error1! Matrix:: Matrix(std::string filename)"<<std::endl;
@@ -198,6 +198,7 @@ void Matrix::print() const{
 }
 
 void Matrix::output(std::string filename){
+    filename="files/"+filename;
     std::ofstream ofs(filename);
     if (!ofs) {
         std::cout<<"void Matrix::output(std::string filename)"<<std::endl;

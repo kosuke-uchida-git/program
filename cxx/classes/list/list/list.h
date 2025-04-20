@@ -1,5 +1,8 @@
 #include"../node/node.h"
 
+#ifndef LIST
+#define LIST
+
 class List{
     protected:
         Node* head;
@@ -16,3 +19,5 @@ class List{
         void addHead(double arg_element);
         void addTail(double arg_element);
 };
+
+#endif

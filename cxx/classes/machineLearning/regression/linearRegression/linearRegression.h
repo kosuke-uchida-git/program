@@ -1,6 +1,9 @@
 #include"../regression/regression.h"
 
-class LinearRegression : public Regression{
+#ifndef LINEAR_REGRESSION
+#define LINEAR_REGRESSION
+
+class LinearRegression : virtual public Regression{
     protected:
         double bias;
         Matrix coefficient;
@@ -15,3 +18,5 @@ class LinearRegression : public Regression{
         void revise_coefficient();
         virtual void revise_coefficient(int dimension_index);
 };
+
+#endif

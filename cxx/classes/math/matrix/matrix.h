@@ -3,6 +3,9 @@
 #include"../vector/vector.h"
 #include"../../list/searchList/searchList.h"
 
+#ifndef MATRIX
+#define MATRIX
+
 class Matrix{
     protected:
         int row;
@@ -49,3 +52,5 @@ class Matrix{
         double maxNorm();
         double l1norm();
 };
+
+#endif

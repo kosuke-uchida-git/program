@@ -1,5 +1,8 @@
 #include<iostream>
 
+#ifndef NODE
+#define NODE
+
 class Node{
     protected:
         double element;
@@ -16,3 +19,5 @@ class Node{
 
         void print();
 };
+
+#endif

@@ -1,6 +1,7 @@
 #include"ridgeLinearRegression.h"
 
 RidgeLinearRegression::RidgeLinearRegression(Matrix data, double arg_missingRate, int seed, double arg_ridgeRegularizer):
+    Regression(data, arg_missingRate, seed),
     LinearRegression(data, arg_missingRate, seed)
 {
     ridgeRegularizer=arg_ridgeRegularizer;

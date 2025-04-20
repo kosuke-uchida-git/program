@@ -9,6 +9,7 @@ classes/machineLearning/regression/regression/regression.cxx \
 classes/machineLearning/regression/linearRegression/linearRegression.cxx \
 classes/machineLearning/regression/ridgeLinearRegression/ridgeLinearRegression.cxx \
 classes/machineLearning/regression/lassoLinearRegression/lassoLinearRegression.cxx \
+classes/machineLearning/regression/elasticNetLinearRegression/elasticNetLinearRegression.cxx \
 main/main.cxx
 ./a.out
 rm a.out

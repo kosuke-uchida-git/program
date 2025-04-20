@@ -1,5 +1,8 @@
 #include"../list/list.h"
 
+#ifndef SEARCH_LIST
+#define SEARCH_LIST
+
 class SearchList{
     protected:
         Node* node;
@@ -8,3 +11,5 @@ class SearchList{
         bool next(double& nextElement);
         bool next();
 };
+
+#endif
