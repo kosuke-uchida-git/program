@@ -58,18 +58,18 @@ public class QuickSort {
             array[i] = smaller.get(j);
             i++;
         }
-        int firstPivot = i;
+        int firstMiddle = i;
         for (int j = 0; j < middle.size(); j++) {
             array[i] = middle.get(j);
             i++;
         }
-        int lastPivot = i - 1;
+        int lastMiddle = i - 1;
         for (int j = 0; j < larger.size(); j++) {
             array[i] = larger.get(j);
             i++;
         }
-        sortAscending(firstIndex, firstPivot - 1);
-        sortAscending(lastPivot + 1, lastIndex);
+        sortAscending(firstIndex, firstMiddle - 1);
+        sortAscending(lastMiddle + 1, lastIndex);
     }
 
     public void sortDescending(int firstIndex, int lastIndex) {
@@ -97,17 +97,17 @@ public class QuickSort {
             array[i] = larger.get(j);
             i++;
         }
-        int firstPivot = i;
+        int firstMiddle = i;
         for (int j = 0; j < middle.size(); j++) {
             array[i] = middle.get(j);
             i++;
         }
-        int lastPivot = i - 1;
+        int lastMiddle = i - 1;
         for (int j = 0; j < smaller.size(); j++) {
             array[i] = smaller.get(j);
             i++;
         }
-        sortDescending(firstIndex, firstPivot - 1);
-        sortDescending(lastPivot + 1, lastIndex);
+        sortDescending(firstIndex, firstMiddle - 1);
+        sortDescending(lastMiddle + 1, lastIndex);
     }
 }
