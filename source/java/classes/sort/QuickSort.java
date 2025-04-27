@@ -73,8 +73,7 @@ public class QuickSort {
     }
 
     public void sortDescending(int firstIndex, int lastIndex) {
-        if (firstIndex >= lastIndex || firstIndex < 0 || lastIndex < 0 || firstIndex >= array.length
-                || lastIndex >= array.length) {
+        if (firstIndex >= lastIndex || firstIndex < 0 || lastIndex >= array.length) {
             return;
         }
         Random rand = new Random();

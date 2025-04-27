@@ -5,7 +5,11 @@ fi
 #make "tmp" directory
 mkdir tmp
 #copy source files to "tmp" directory
-cp classes/sort/SelectionSort.java classes/sort/BubbleSort.java classes/sort/QuickSort.java main/Main.java tmp
+cp \
+classes/sort/SelectionSort.java \
+classes/sort/BubbleSort.java \
+classes/sort/QuickSort.java \
+main/Main.java tmp
 #move to "tmp" directory
 cd tmp
 #compile source files
