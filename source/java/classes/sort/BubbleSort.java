@@ -1,8 +1,8 @@
-public class SelectionSort {
+public class BubbleSort {
     protected double[] array;
 
     // constructor
-    public SelectionSort(double[] arg_array) {
+    public BubbleSort(double[] arg_array) {
         array = new double[arg_array.length];
         for (int i = 0; i < array.length; i++) {
             array[i] = arg_array[i];
@@ -22,21 +22,21 @@ public class SelectionSort {
     public void sort(boolean order) {// order=true : ascending order, order=false : descending order
         if (order) {
             for (int i = 0; i < array.length - 1; i++) {
-                for (int j = i + 1; j < array.length; j++) {
-                    if (array[i] > array[j]) {
-                        double tmp = array[i];
-                        array[i] = array[j];
-                        array[j] = tmp;
+                for (int j = array.length - 1; j > i; j--) {
+                    if (array[j - 1] > array[j]) {
+                        double tmp = array[j];
+                        array[j] = array[j - 1];
+                        array[j - 1] = tmp;
                     }
                 }
             }
         } else {
             for (int i = 0; i < array.length - 1; i++) {
-                for (int j = i + 1; j < array.length; j++) {
-                    if (array[i] < array[j]) {
-                        double tmp = array[i];
-                        array[i] = array[j];
-                        array[j] = tmp;
+                for (int j = array.length - 1; j > i; j--) {
+                    if (array[j - 1] < array[j]) {
+                        double tmp = array[j];
+                        array[j] = array[j - 1];
+                        array[j - 1] = tmp;
                     }
                 }
             }
