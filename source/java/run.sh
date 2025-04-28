@@ -8,6 +8,7 @@ mkdir tmp
 cp \
 classes/sort/SelectionSort.java \
 classes/sort/BubbleSort.java \
+classes/sort/InsertionSort.java \
 classes/sort/QuickSort.java \
 main/Main.java tmp
 #move to "tmp" directory

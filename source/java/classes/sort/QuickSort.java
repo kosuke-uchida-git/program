@@ -42,13 +42,13 @@ public class QuickSort {
         int num = rand.nextInt(lastIndex - firstIndex + 1) + firstIndex;
         double pivot = array[num];
         ArrayList<Double> smaller = new ArrayList<Double>();
-        ArrayList<Double> middle = new ArrayList<Double>();
+        int middle = 0;
         ArrayList<Double> larger = new ArrayList<Double>();
         for (int i = firstIndex; i <= lastIndex; i++) {
             if (array[i] > pivot) {
                 larger.add(array[i]);
             } else if (array[i] == pivot) {
-                middle.add(array[i]);
+                middle++;
             } else {
                 smaller.add(array[i]);
             }
@@ -59,8 +59,8 @@ public class QuickSort {
             i++;
         }
         int firstMiddle = i;
-        for (int j = 0; j < middle.size(); j++) {
-            array[i] = middle.get(j);
+        for (int j = 0; j < middle; j++) {
+            array[i] = pivot;
             i++;
         }
         int lastMiddle = i - 1;
@@ -80,13 +80,13 @@ public class QuickSort {
         int num = rand.nextInt(lastIndex - firstIndex + 1) + firstIndex;
         double pivot = array[num];
         ArrayList<Double> smaller = new ArrayList<Double>();
-        ArrayList<Double> middle = new ArrayList<Double>();
+        int middle = 0;
         ArrayList<Double> larger = new ArrayList<Double>();
         for (int i = firstIndex; i <= lastIndex; i++) {
             if (array[i] > pivot) {
                 larger.add(array[i]);
             } else if (array[i] == pivot) {
-                middle.add(array[i]);
+                middle++;
             } else {
                 smaller.add(array[i]);
             }
@@ -97,8 +97,8 @@ public class QuickSort {
             i++;
         }
         int firstMiddle = i;
-        for (int j = 0; j < middle.size(); j++) {
-            array[i] = middle.get(j);
+        for (int j = 0; j < middle; j++) {
+            array[i] = pivot;
             i++;
         }
         int lastMiddle = i - 1;
