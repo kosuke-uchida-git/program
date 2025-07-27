@@ -1,0 +1,4 @@
+bias=4.999976
+coefficient=(0.008783 -1.096199 -0.183515 0.009148 -1.893631 0.004510 -0.003309 -0.565496 -0.499642 0.891960 0.292320 )
+Execution time: 30134 ms
+ubuntu@ubuntu:~/mount/source/matrix copy$ 
